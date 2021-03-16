@@ -7,13 +7,13 @@ using namespace std;
      string snowman(int number){
          string number_str = to_string(number);
          
-         if(number_str.size() != 8)
+         if(number_str.size() != NUM)
          {//check valid number of snowman
              throw invalid_argument("Invalid code \'" + number_str + "\'");
          }
          
          char index = '0';  //specific number of one part of the body of snowman
-         for(int i = 0; i < 8; i++)
+         for(int i = 0; i < NUM; i++)
          {
             index = number_str[i];
              if(index < '1' || index > '4')
@@ -41,7 +41,7 @@ using namespace std;
          }
          else
          {
-             left = larm.at(index - '1');
+             left = Larm.at(index - '1');
          }
          index = number_str[i++];
          if(index == '2')
@@ -50,7 +50,7 @@ using namespace std;
          }
          else
          {
-             right = rarm.at(index - '1');
+             right = Rarm.at(index - '1');
          }
          index = number_str[i++];
          string torso = body.at(index - '1');

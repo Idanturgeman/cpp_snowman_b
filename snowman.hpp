@@ -1,16 +1,17 @@
 #include <string>
+#include <array>
 
 namespace ariel {
     
-    std::string snowman(int build);
+    std::string snowman(int number);
 
-    const std::string base[] = {" ( : ) ", " (\" \") ", " (___) ", " (   ) "};
-    const std::string hat[] = {" _===_ \n", "  ___  \n ..... \n", "   _   \n  /_\\  \n", "  ___  \n (_*_) \n"};
-    const char nose[] = {',','.','_',' '};
-    const char eyes[] = {'.','o','O','-'};
-    const char Rarm[] = {'>', '/', '\\', ' '};
-    const char Larm[] = {'<', '\\', '/', ' '};
+    const std::array<std::string, 4> base = {" ( : ) ", " (\" \") ", " (___) ", " (   ) "};
+    const std::array<std::string, 4> hat = {" _===_ \n", "  ___  \n ..... \n", "   _   \n  /_\\  \n", "  ___  \n (_*_) \n"};
+    const std::array<char, 4> nose = {',','.','_',' '};
+    const std::array<char, 4> eyes = {'.','o','O','-'};
+    const std::array<char, 4> Rarm = {'>', '/', '\\', ' '};
+    const std::array<char, 4> Larm = {'<', '\\', '/', ' '};
     const std::string head_tmp = " (   ) \n";
-    const std::string body[] = {" ( : ) \n", " (] [) \n", " (> <) \n", " (   ) \n"};
-    
+    const std::array<std::string, 4> body = {" ( : ) \n", " (] [) \n", " (> <) \n", " (   ) \n"};
+    const int NUM = 8;
 };
